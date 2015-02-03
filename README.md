@@ -1,7 +1,7 @@
 # Angular Multiple Drag Module
 Simplest way to make your angular items movable
 
-This module used [Angular Multiple Selection Module](https://github.com/maxazan/angular-multiple-selection)
+This module uses [Angular Multiple Selection Module](https://github.com/maxazan/angular-multiple-selection)
 
 [Demo](http://maxazan.github.io/angular-multiple-drag/)
 
