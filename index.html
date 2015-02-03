@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title>Angular Select and Drag Demo</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+
+    <script type="text/javascript" src="bower_components/angular-multiple-selection/multiple-selection.min.js"></script>
+    <script type="text/javascript" src="multiple-drag.js"></script>
+    <script type="text/javascript">
+    angular.module('app', ['multipleDrag']);
+    </script>
+
+    <style type="text/css">
+    .row {
+        width: 100%;
+        overflow: hidden;
+        /* disable selection */
+        
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .item_container {
+        position: absolute;
+        border: 1px solid #ccc;
+        padding: 10px;
+        height: 500px;
+        overflow: hidden;
+    }
+    .item_container div {
+        width: 33%
+    }
+    .select-helper {
+        position: absolute;
+        border: 1px dashed red;
+        background: red;
+        opacity: 0.2;
+    }
+    .selected {
+        background-color: green !important;
+    }
+    .selecting {
+        background-color: yellow !important;
+    }
+    .dragging {
+        background-color: red !important;
+    }
+    
+    .item1{
+        top:10px;
+    }
+    .item2{
+        top:80px;
+        left:400px;
+    }
+    .item3{
+        top:150px;
+        left:800px;
+    }
+    .item4{
+        top:220px;
+        left:400px;
+    }
+    .item5{
+        top:290px;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Angular Select and Drag Demo</h1>
+        <i>Simple way to make your element movable</i><br> For single selection you can use mouse click. For multiple selection you can use Ctrl + Mouse click or Mouse dragging.
+        When you select one or few elements you can move them.
+
+        <h2>Simple demo</h2>
+        <div class="row item_container" multiple-selection-zone>
+            <div multiple-selection-item multiple-drag-item class="well item1" ng-class="{'selecting': isSelecting ,'selected': isSelected,'dragging': isDragging}">Lorem ipsum dolor sit amet alias, sint magni?</div>
+            <div multiple-selection-item multiple-drag-item class="well item2" ng-class="{'selecting': isSelecting ,'selected': isSelected,'dragging': isDragging}">Lorem ipsum dolor sit amet ad mollitia fugiat minima.</div>
+            <div multiple-selection-item multiple-drag-item class="well item3" ng-class="{'selecting': isSelecting ,'selected': isSelected,'dragging': isDragging}">Lorem ipsum dolor sit amet autem!</div>
+            <div multiple-selection-item multiple-drag-item class="well item4" ng-class="{'selecting': isSelecting ,'selected': isSelected,'dragging': isDragging}">Lorem ipsum dolor sit amet beatae.</div>
+            <div multiple-selection-item multiple-drag-item class="well item5" ng-class="{'selecting': isSelecting ,'selected': isSelected,'dragging': isDragging}">Lorem ipsum dolor sit amet. Iure vitae temporibus maiores perspiciatis!</div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

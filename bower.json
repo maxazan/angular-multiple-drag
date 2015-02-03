@@ -1,0 +1,22 @@
+{
+  "name": "angular-multiple-drag",
+  "version": "0.0.1",
+  "homepage": "https://github.com/maxazan/angular-multiple-drag",
+  "authors": [
+    "Maksym Pomazan"
+  ],
+  "description": "Simplest way to make your angular items movable",
+  "main": "multiple-drag.js",
+  "keywords": [
+    "drag",
+    "move",
+    "module",
+    "angular",
+    "multi",
+    "multiple"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular-multiple-selection": "~0.0.1"
+  }
+}
